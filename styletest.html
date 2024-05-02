@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/w98.css">
-    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="stylesheets/XP.css">
+    <link rel="stylesheet" href="stylesheets/desktop.css">
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/7.css"> -->
     <title>Document</title>
     <script src="./scripts/jquery-3.7.1.min.js"></script>
@@ -14,15 +16,14 @@
 
 <body>
     <!-- Greeting screen (For audio enabling purposes) -->
-    <!-- <div class="greeting-overlay">
+    <div class="greeting-overlay">
         <button class="greeting-button">Play</button>
-    </div> -->
-
+    </div>
     <div class="wallpaper">
-        
+
         <!-- Taskbar -->
-        <div class="window taskbar status-bar">
-    
+        <!-- <div class="window taskbar status-bar">
+
             <button class="taskbar-startbutton">
                 <img src="./stylesheets/resources/ui_elements/daostart.png">
             </button>
@@ -33,10 +34,72 @@
                     <p class="system-clock"></p>
                 </div>
             </div>
+        </div> -->
+        <div id="taskbar">
+            <div class="background sliced vertical">
+                <!-- Gradient Styling -->
+                <div class="row top"></div>
+                <div class="row middle"></div>
+                <div class="row bottom"></div>
+            </div>
+            <div id="start-button">
+                <div class="container">
+                    <div class="background sliced">
+                        <div class="column left">
+                            <div class="row top"></div>
+                            <div class="row middle"></div>
+                            <div class="row bottom"></div>
+                        </div>
+                        <div class="column middle">
+                            <div class="row top"></div>
+                            <div class="row middle"></div>
+                            <div class="row bottom"></div>
+                        </div>
+                        <div class="column right">
+                            <div class="row top"></div>
+                            <div class="row middle"></div>
+                            <div class="row bottom"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img id="start-button-icon" src="stylesheets/resources/ui_elements/dao_starticon.png"/></span>
+                        <span class="text">Start</span>
+                    </div>
+                </div>
+            </div>
+            <div id="task-band">
+            </div>
+            <div id="tray-notify">
+                <div class="container">
+                    <div class="background sliced">
+                        <div class="column left">
+                            <!-- Gradient Styling -->
+                            <div class="row top"></div>
+                            <div class="row middle"></div>
+                            <div class="row bottom"></div>
+                        </div>
+                        <div class="column middle">
+                            <div class="row top"></div>
+                            <div class="row middle"></div>
+                            <div class="row bottom"></div>
+                        </div>
+                        <div class="column right">
+                            <div class="row top"></div>
+                            <div class="row middle"></div>
+                            <div class="row bottom"></div>
+                        </div>
+                    </div>
+                    <!-- Actual Content!!! -->
+                    <div class="content">
+                        <div class="system-clock"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
 
 
 </body>
+
 </html>
