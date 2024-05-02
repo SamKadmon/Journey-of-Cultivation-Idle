@@ -1,23 +1,23 @@
 /*! XP.css v0.2.6 - https://botoxparty.github.io/XP.css/ */
 @font-face {
     font-family: "Pixelated MS Sans Serif";
-    src: url(ms_sans_serif.woff) format("woff");
-    src: url(ms_sans_serif.woff2) format("woff2");
+    src: url(resources/fonts/ms_sans_serif_bold.woff) format("woff");
+    src: url(resources/fonts/ms_sans_serif_bold.woff2) format("woff2");
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: "Pixelated MS Sans Serif";
-    src: url(ms_sans_serif_bold.woff) format("woff");
-    src: url(ms_sans_serif_bold.woff2) format("woff2");
+    src: url(resources/fonts/ms_sans_serif_bold.woff) format("woff");
+    src: url(resources/fonts/ms_sans_serif_bold.woff2) format("woff2");
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: Perfect DOS VGA\ 437 Win;
-    src: url(PerfectDOSVGA437Win.woff2) format("woff2"),url(PerfectDOSVGA437Win.woff) format("woff");
+    src: url(resources/fonts/Perfect\ DOS\ VGA\ 437.ttf) format("ttf");
     font-weight: 400;
     font-style: normal
 }
@@ -61,7 +61,8 @@ a:focus {
     outline: 1px dotted #00f
 }
 
-code,code * {
+code,
+code * {
     font-family: monospace
 }
 
@@ -74,7 +75,8 @@ pre {
     margin: 0
 }
 
-pre,pre * {
+pre,
+pre * {
     font-family: Perfect DOS VGA\ 437 Win
 }
 
@@ -96,10 +98,13 @@ summary:focus {
 
 ::-webkit-scrollbar-thumb {
     background-color: #dfdfdf;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf
 }
 
-::-webkit-scrollbar-button:horizontal:end:increment,::-webkit-scrollbar-button:horizontal:start:decrement,::-webkit-scrollbar-button:vertical:end:increment,::-webkit-scrollbar-button:vertical:start:decrement {
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement {
     display: block
 }
 
@@ -124,18 +129,20 @@ summary:focus {
 button {
     border: none;
     background: #ece9d8;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
     border-radius: 0;
     min-width: 75px;
     min-height: 23px;
     padding: 0 12px
 }
 
-button:not(:disabled).active,button:not(:disabled):active {
-    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey
+button:not(:disabled).active,
+button:not(:disabled):active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey
 }
 
-button.focused,button:focus {
+button.focused,
+button:focus {
     outline: 1px dotted #000;
     outline-offset: -4px
 }
@@ -145,8 +152,10 @@ label {
     align-items: center
 }
 
-input,label,textarea {
-    font-family: "Pixelated MS Sans Serif",Arial;
+input,
+label,
+textarea {
+    font-family: "Pixelated MS Sans Serif", Arial;
     font-size: 11px
 }
 
@@ -166,7 +175,7 @@ textarea:focus {
 }
 
 select {
-    font-family: "Pixelated MS Sans Serif",Arial;
+    font-family: "Pixelated MS Sans Serif", Arial;
     font-size: 11px;
     border: none;
     background-color: #fff;
@@ -199,7 +208,7 @@ select:active {
 }
 
 option {
-    font-family: "Pixelated MS Sans Serif",Arial;
+    font-family: "Pixelated MS Sans Serif", Arial;
     font-size: 11px
 }
 
@@ -207,10 +216,11 @@ option {
     width: 4px;
     height: 20px;
     background: silver;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf
 }
 
-&:disabled,&:disabled+label {
+&:disabled,
+&:disabled+label {
     color: grey;
     text-shadow: 1px 1px 0 #fff
 }
@@ -273,7 +283,7 @@ input[type=checkbox]+label:before {
     width: 13px;
     height: 13px;
     background: #fff;
-    box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
     margin-right: 6px
 }
 
@@ -311,7 +321,9 @@ input[type=checkbox][disabled]:checked+label:after {
     background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='7' height='7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 0H6v1H5v1H4v1H3v1H2V3H1V2H0v3h1v1h1v1h1V6h1V5h1V4h1V3h1V0z' fill='gray'/%3E%3C/svg%3E")
 }
 
-input[type=email],input[type=password],input[type=text] {
+input[type=email],
+input[type=password],
+input[type=text] {
     padding: 3px 4px;
     border: 1px solid #7f9db9;
     background-color: #fff;
@@ -324,7 +336,9 @@ input[type=email],input[type=password],input[type=text] {
     line-height: 2
 }
 
-input[type=email]:focus,input[type=password]:focus,input[type=text]:focus {
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus {
     outline: none
 }
 
@@ -351,14 +365,14 @@ input[type=range]::-webkit-slider-runnable-track {
     background: #000;
     border-right: 1px solid grey;
     border-bottom: 1px solid grey;
-    box-shadow: 1px 0 0 #fff,1px 1px 0 #fff,0 1px 0 #fff,-1px 0 0 #a9a9a9,-1px -1px 0 #a9a9a9,0 -1px 0 #a9a9a9,-1px 1px 0 #fff,1px -1px #a9a9a9
+    box-shadow: 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #a9a9a9, -1px -1px 0 #a9a9a9, 0 -1px 0 #a9a9a9, -1px 1px 0 #fff, 1px -1px #a9a9a9
 }
 
 input[type=range]::-moz-range-track {
     background: #000;
     border-right: 1px solid grey;
     border-bottom: 1px solid grey;
-    box-shadow: 1px 0 0 #fff,1px 1px 0 #fff,0 1px 0 #fff,-1px 0 0 #a9a9a9,-1px -1px 0 #a9a9a9,0 -1px 0 #a9a9a9,-1px 1px 0 #fff,1px -1px #a9a9a9
+    box-shadow: 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #a9a9a9, -1px -1px 0 #a9a9a9, 0 -1px 0 #a9a9a9, -1px 1px 0 #fff, 1px -1px #a9a9a9
 }
 
 input[type=range].has-box-indicator::-webkit-slider-thumb {
@@ -387,13 +401,13 @@ input[type=range].has-box-indicator::-moz-range-thumb {
 .is-vertical>input[type=range]::-webkit-slider-runnable-track {
     border-left: 1px solid grey;
     border-bottom: 1px solid grey;
-    box-shadow: -1px 0 0 #fff,-1px 1px 0 #fff,0 1px 0 #fff,1px 0 0 #a9a9a9,1px -1px 0 #a9a9a9,0 -1px 0 #a9a9a9,1px 1px 0 #fff,-1px -1px #a9a9a9
+    box-shadow: -1px 0 0 #fff, -1px 1px 0 #fff, 0 1px 0 #fff, 1px 0 0 #a9a9a9, 1px -1px 0 #a9a9a9, 0 -1px 0 #a9a9a9, 1px 1px 0 #fff, -1px -1px #a9a9a9
 }
 
 .is-vertical>input[type=range]::-moz-range-track {
     border-left: 1px solid grey;
     border-bottom: 1px solid grey;
-    box-shadow: -1px 0 0 #fff,-1px 1px 0 #fff,0 1px 0 #fff,1px 0 0 #a9a9a9,1px -1px 0 #a9a9a9,0 -1px 0 #a9a9a9,1px 1px 0 #fff,-1px -1px #a9a9a9
+    box-shadow: -1px 0 0 #fff, -1px 1px 0 #fff, 0 1px 0 #fff, 1px 0 0 #a9a9a9, 1px -1px 0 #a9a9a9, 0 -1px 0 #a9a9a9, 1px 1px 0 #fff, -1px -1px #a9a9a9
 }
 
 .is-vertical>input[type=range]::-webkit-slider-thumb {
@@ -414,7 +428,7 @@ input[type=range].has-box-indicator::-moz-range-thumb {
 
 .window {
     font-size: 11px;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
     background: #ece9d8;
     padding: 3px
 }
@@ -465,14 +479,14 @@ input[type=range].has-box-indicator::-moz-range-thumb {
 }
 
 .status-bar-field {
-    box-shadow: inset -1px -1px #dfdfdf,inset 1px 1px grey;
+    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px grey;
     flex-grow: 1;
     padding: 2px 3px;
     margin: 0
 }
 
 ul.tree-view {
-    font-family: "Pixelated MS Sans Serif",Arial;
+    font-family: "Pixelated MS Sans Serif", Arial;
     font-size: 11px;
     display: block;
     background: #fff;
@@ -562,7 +576,8 @@ ul.tree-view details[open]>summary:before {
 fieldset {
     border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='5' height='5' fill='gray' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0h5v5H0V2h2v1h1V2H0' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0h4v4H0V1h1v2h2V1H0'/%3E%3C/svg%3E") 2;
     padding: 10px;
-    padding-block-start:8px;margin: 0
+    padding-block-start: 8px;
+    margin: 0
 }
 
 legend {
@@ -609,7 +624,7 @@ menu[role=tablist].justified button {
 [role=tabpanel] {
     padding: 14px;
     clear: both;
-    background: linear-gradient(180deg,#fcfcfe,#f4f3ee);
+    background: linear-gradient(180deg, #fcfcfe, #f4f3ee);
     border: 1px solid #919b9c;
     position: relative;
     z-index: 2;
@@ -639,7 +654,7 @@ menu[role=tablist].justified button {
     background-size: 7px;
     border: 1px solid #fff;
     border-radius: 2px;
-    box-shadow: inset -3px 0 #bad1fc,inset 1px 1px #b7caf5
+    box-shadow: inset -3px 0 #bad1fc, inset 1px 1px #b7caf5
 }
 
 ::-webkit-scrollbar-thumb:vertical {
@@ -672,7 +687,7 @@ menu[role=tablist].justified button {
 }
 
 .window {
-    box-shadow: inset -1px -1px #00138c,inset 1px 1px #0831d9,inset -2px -2px #001ea0,inset 2px 2px #166aee,inset -3px -3px #003bda,inset 3px 3px #0855dd;
+    box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9, inset -2px -2px #001ea0, inset 2px 2px #166aee, inset -3px -3px #003bda, inset 3px 3px #0855dd;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 0 0 3px;
@@ -681,7 +696,7 @@ menu[role=tablist].justified button {
 
 .title-bar {
     font-family: Tahoma;
-    background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
+    background: linear-gradient(180deg, #0997ff, #0053ee 8%, #0050ee 40%, #06f 88%, #06f 93%, #005bff 95%, #003dd7 96%, #003dd7);
     padding: 3px 5px 3px 3px;
     border-top: 1px solid #0831d9;
     border-left: 1px solid #0831d9;
@@ -713,8 +728,10 @@ menu[role=tablist].justified button {
     border: none
 }
 
-.title-bar-controls button:active,.title-bar-controls button:focus,.title-bar-controls button:hover {
-    box-shadow: none!important
+.title-bar-controls button:active,
+.title-bar-controls button:focus,
+.title-bar-controls button:hover {
+    box-shadow: none !important
 }
 
 .title-bar-controls button[aria-label=Minimize] {
@@ -785,12 +802,12 @@ menu[role=tablist].justified button {
 }
 
 .status-bar-field {
-    font-family: "Pixelated MS Sans Serif",Arial;
+    font-family: "Pixelated MS Sans Serif", Arial;
     -webkit-font-smoothing: antialiased;
     box-shadow: none;
     padding: 1px 2px;
-    border-right: 1px solid rgba(208,206,191,.75);
-    border-left: 1px solid hsla(0,0%,100%,.75)
+    border-right: 1px solid rgba(208, 206, 191, .75);
+    border-left: 1px solid hsla(0, 0%, 100%, .75)
 }
 
 .status-bar-field:first-of-type {
@@ -802,34 +819,40 @@ menu[role=tablist].justified button {
 }
 
 button {
-    font-family: "Pixelated MS Sans Serif",Arial;
+    font-family: "Pixelated MS Sans Serif", Arial;
     -webkit-font-smoothing: antialiased;
     font-size: 11px;
     box-sizing: border-box;
     border: 1px solid #003c74;
-    background: linear-gradient(180deg,#fff,#ecebe5 86%,#d8d0c4);
+    background: linear-gradient(180deg, #fff, #ecebe5 86%, #d8d0c4);
     box-shadow: none;
     border-radius: 3px
 }
 
-button:not(:disabled).active,button:not(:disabled):active {
+button:not(:disabled).active,
+button:not(:disabled):active {
     box-shadow: none;
-    background: linear-gradient(180deg,#cdcac3,#e3e3db 8%,#e5e5de 94%,#f2f2f1)
+    background: linear-gradient(180deg, #cdcac3, #e3e3db 8%, #e5e5de 94%, #f2f2f1)
 }
 
 button:not(:disabled):hover {
-    box-shadow: inset -1px 1px #fff0cf,inset 1px 2px #fdd889,inset -2px 2px #fbc761,inset 2px -2px #e5a01a
+    box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #fdd889, inset -2px 2px #fbc761, inset 2px -2px #e5a01a
 }
 
-button.focused,button:focus {
-    box-shadow: inset -1px 1px #cee7ff,inset 1px 2px #98b8ea,inset -2px 2px #bcd4f6,inset 1px -1px #89ade4,inset 2px -2px #89ade4
+button.focused,
+button:focus {
+    box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea, inset -2px 2px #bcd4f6, inset 1px -1px #89ade4, inset 2px -2px #89ade4
 }
 
 button::-moz-focus-inner {
     border: 0
 }
 
-input,label,option,select,textarea {
+input,
+label,
+option,
+select,
+textarea {
     -webkit-font-smoothing: antialiased
 }
 
@@ -840,7 +863,7 @@ select {
 }
 
 select:focus {
-    box-shadow: inset 2px 2px #fff,inset -2px -2px #fff
+    box-shadow: inset 2px 2px #fff, inset -2px -2px #fff
 }
 
 select:hover {
@@ -867,17 +890,17 @@ input[type=radio]+label {
 }
 
 input[type=radio]+label:before {
-    background: linear-gradient(135deg,#dcdcd7,#fff);
+    background: linear-gradient(135deg, #dcdcd7, #fff);
     border-radius: 50%;
     border: 1px solid #1d5281
 }
 
 input[type=radio]:not([disabled]):not(:active)+label:hover:before {
-    box-shadow: inset -2px -2px #f8b636,inset 2px 2px #fedf9c
+    box-shadow: inset -2px -2px #f8b636, inset 2px 2px #fedf9c
 }
 
 input[type=radio]:active+label:before {
-    background: linear-gradient(135deg,#b0b0a7,#e3e1d2)
+    background: linear-gradient(135deg, #b0b0a7, #e3e1d2)
 }
 
 input[type=radio]:checked+label:after {
@@ -900,7 +923,7 @@ input[type=radio][disabled]:checked+label:after {
 input[type=checkbox]+label:before {
     box-shadow: none;
     border: 1px solid #1d5281;
-    background: linear-gradient(135deg,#dcdcd7,#fff)
+    background: linear-gradient(135deg, #dcdcd7, #fff)
 }
 
 input[type=checkbox]:checked+label:after {
@@ -909,11 +932,11 @@ input[type=checkbox]:checked+label:after {
 }
 
 input[type=checkbox]:not([disabled]):not(:active)+label:hover:before {
-    box-shadow: inset -2px -2px #f8b636,inset 2px 2px #fedf9c
+    box-shadow: inset -2px -2px #f8b636, inset 2px 2px #fedf9c
 }
 
 input[type=checkbox]:active+label:before {
-    background: linear-gradient(135deg,#b0b0a7,#e3e1d2)
+    background: linear-gradient(135deg, #b0b0a7, #e3e1d2)
 }
 
 input[type=checkbox][disabled]+label:before {
@@ -925,7 +948,10 @@ input[type=checkbox][disabled]:checked+label:after {
     background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -0.5 11 11' shape-rendering='crispEdges'%3E%3Cpath stroke='%23cac8bb' d='M8 2h1M7 3h2M2 4h1m3 0h3M2 5h2m1 0h3M2 6h5M3 7h3M4 8h1'/%3E%3C/svg%3E")
 }
 
-input[type=email],input[type=password],input[type=text],select {
+input[type=email],
+input[type=password],
+input[type=text],
+select {
     height: 23px
 }
 
@@ -963,7 +989,7 @@ input[type=range]::-webkit-slider-runnable-track {
     border-right: 1px solid #f3f2ea;
     border-bottom: 1px solid #f3f2ea;
     border-radius: 2px;
-    box-shadow: 1px 0 0 #fff,1px 1px 0 #fff,0 1px 0 #fff,-1px 0 0 #9d9c99,-1px -1px 0 #9d9c99,0 -1px 0 #9d9c99,-1px 1px 0 #fff,1px -1px #9d9c99
+    box-shadow: 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #9d9c99, -1px -1px 0 #9d9c99, 0 -1px 0 #9d9c99, -1px 1px 0 #fff, 1px -1px #9d9c99
 }
 
 input[type=range]::-moz-range-track {
@@ -974,7 +1000,7 @@ input[type=range]::-moz-range-track {
     border-right: 1px solid #f3f2ea;
     border-bottom: 1px solid #f3f2ea;
     border-radius: 2px;
-    box-shadow: 1px 0 0 #fff,1px 1px 0 #fff,0 1px 0 #fff,-1px 0 0 #9d9c99,-1px -1px 0 #9d9c99,0 -1px 0 #9d9c99,-1px 1px 0 #fff,1px -1px #9d9c99
+    box-shadow: 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #9d9c99, -1px -1px 0 #9d9c99, 0 -1px 0 #9d9c99, -1px 1px 0 #fff, 1px -1px #9d9c99
 }
 
 input[type=range].has-box-indicator::-webkit-slider-thumb {
@@ -991,14 +1017,14 @@ input[type=range].has-box-indicator::-moz-range-thumb {
     border-left: 1px solid #f3f2ea;
     border-right: 0;
     border-bottom: 1px solid #f3f2ea;
-    box-shadow: -1px 0 0 #fff,-1px 1px 0 #fff,0 1px 0 #fff,1px 0 0 #9d9c99,1px -1px 0 #9d9c99,0 -1px 0 #9d9c99,1px 1px 0 #fff,-1px -1px #9d9c99
+    box-shadow: -1px 0 0 #fff, -1px 1px 0 #fff, 0 1px 0 #fff, 1px 0 0 #9d9c99, 1px -1px 0 #9d9c99, 0 -1px 0 #9d9c99, 1px 1px 0 #fff, -1px -1px #9d9c99
 }
 
 .is-vertical>input[type=range]::-moz-range-track {
     border-left: 1px solid #f3f2ea;
     border-right: 0;
     border-bottom: 1px solid #f3f2ea;
-    box-shadow: -1px 0 0 #fff,-1px 1px 0 #fff,0 1px 0 #fff,1px 0 0 #9d9c99,1px -1px 0 #9d9c99,0 -1px 0 #9d9c99,1px 1px 0 #fff,-1px -1px #9d9c99
+    box-shadow: -1px 0 0 #fff, -1px 1px 0 #fff, 0 1px 0 #fff, 1px 0 0 #9d9c99, 1px -1px 0 #9d9c99, 0 -1px 0 #9d9c99, 1px 1px 0 #fff, -1px -1px #9d9c99
 }
 
 fieldset {
@@ -1037,7 +1063,7 @@ legend {
 }
 
 menu[role=tablist] button {
-    background: linear-gradient(180deg,#fff,#fafaf9 26%,#f0f0ea 95%,#ecebe5);
+    background: linear-gradient(180deg, #fff, #fafaf9 26%, #f0f0ea 95%, #ecebe5);
     margin-left: -1px;
     margin-right: 2px;
     border-radius: 0;
@@ -1075,7 +1101,7 @@ menu[role=tablist] button[aria-selected=true]:first-of-type:before {
 }
 
 [role=tabpanel] {
-    box-shadow: inset 1px 1px #fcfcfe,inset -1px -1px #fcfcfe,1px 2px 2px 0 rgba(208,206,191,.75)
+    box-shadow: inset 1px 1px #fcfcfe, inset -1px -1px #fcfcfe, 1px 2px 2px 0 rgba(208, 206, 191, .75)
 }
 
 ul.tree-view {
@@ -1109,7 +1135,8 @@ progress {
     -moz-box-shadow: inset 0 0 1px 0 #686868
 }
 
-progress,progress:not([value]) {
+progress,
+progress:not([value]) {
     box-shadow: inset 0 0 1px 0 #686868
 }
 
@@ -1125,23 +1152,23 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
     border-radius: 2px;
-    background: repeating-linear-gradient(90deg,#fff 0,#fff 2px,transparent 0,transparent 10px),linear-gradient(180deg,#acedad 0,#7be47d 14%,#4cda50 28%,#2ed330 42%,#42d845 57%,#76e275 71%,#8fe791 85%,#fff)
+    background: repeating-linear-gradient(90deg, #fff 0, #fff 2px, transparent 0, transparent 10px), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff)
 }
 
 progress[value]::-moz-progress-bar {
     border-radius: 2px;
-    background: repeating-linear-gradient(90deg,#fff 0,#fff 2px,transparent 0,transparent 10px),linear-gradient(180deg,#acedad 0,#7be47d 14%,#4cda50 28%,#2ed330 42%,#42d845 57%,#76e275 71%,#8fe791 85%,#fff)
+    background: repeating-linear-gradient(90deg, #fff 0, #fff 2px, transparent 0, transparent 10px), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff)
 }
 
 progress:not([value])::-webkit-progress-bar {
     width: 100%;
-    background: repeating-linear-gradient(90deg,transparent 0,transparent 8px,#fff 0,#fff 10px,transparent 0,transparent 18px,#fff 0,#fff 20px,transparent 0,transparent 28px,#fff 0,#fff),linear-gradient(180deg,#acedad 0,#7be47d 14%,#4cda50 28%,#2ed330 42%,#42d845 57%,#76e275 71%,#8fe791 85%,#fff);
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 8px, #fff 0, #fff 10px, transparent 0, transparent 18px, #fff 0, #fff 20px, transparent 0, transparent 28px, #fff 0, #fff), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff);
     animation: sliding 2s linear 0s infinite
 }
 
 progress:not([value])::-webkit-progress-bar:not([value]) {
     animation: sliding 2s linear 0s infinite;
-    background: repeating-linear-gradient(90deg,transparent 0,transparent 8px,#fff 0,#fff 10px,transparent 0,transparent 18px,#fff 0,#fff 20px,transparent 0,transparent 28px,#fff 0,#fff),linear-gradient(180deg,#acedad 0,#7be47d 14%,#4cda50 28%,#2ed330 42%,#42d845 57%,#76e275 71%,#8fe791 85%,#fff)
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 8px, #fff 0, #fff 10px, transparent 0, transparent 18px, #fff 0, #fff 20px, transparent 0, transparent 28px, #fff 0, #fff), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff)
 }
 
 progress:not([value]) {
@@ -1161,7 +1188,8 @@ progress:not([value]):before {
     -moz-box-shadow: inset 0 0 1px 0 #686868
 }
 
-progress:not([value]):before,progress:not([value]):before:not([value]) {
+progress:not([value]):before,
+progress:not([value]):before:not([value]) {
     box-shadow: inset 0 0 1px 0 #686868
 }
 
@@ -1180,26 +1208,27 @@ progress:not([value]):after {
     height: calc(100% - 2px);
     padding: 1px 2px;
     border-radius: 2px;
-    background: repeating-linear-gradient(90deg,transparent 0,transparent 8px,#fff 0,#fff 10px,transparent 0,transparent 18px,#fff 0,#fff 20px,transparent 0,transparent 28px,#fff 0,#fff),linear-gradient(180deg,#acedad 0,#7be47d 14%,#4cda50 28%,#2ed330 42%,#42d845 57%,#76e275 71%,#8fe791 85%,#fff)
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 8px, #fff 0, #fff 10px, transparent 0, transparent 18px, #fff 0, #fff 20px, transparent 0, transparent 28px, #fff 0, #fff), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff)
 }
 
-progress:not([value]):after,progress:not([value]):after:not([value]) {
+progress:not([value]):after,
+progress:not([value]):after:not([value]) {
     animation: sliding 2s linear 0s infinite
 }
 
 progress:not([value]):after:not([value]) {
-    background: repeating-linear-gradient(90deg,transparent 0,transparent 8px,#fff 0,#fff 10px,transparent 0,transparent 18px,#fff 0,#fff 20px,transparent 0,transparent 28px,#fff 0,#fff),linear-gradient(180deg,#acedad 0,#7be47d 14%,#4cda50 28%,#2ed330 42%,#42d845 57%,#76e275 71%,#8fe791 85%,#fff)
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 8px, #fff 0, #fff 10px, transparent 0, transparent 18px, #fff 0, #fff 20px, transparent 0, transparent 28px, #fff 0, #fff), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff)
 }
 
 progress:not([value])::-moz-progress-bar {
     width: 100%;
-    background: repeating-linear-gradient(90deg,transparent 0,transparent 8px,#fff 0,#fff 10px,transparent 0,transparent 18px,#fff 0,#fff 20px,transparent 0,transparent 28px,#fff 0,#fff),linear-gradient(180deg,#acedad 0,#7be47d 14%,#4cda50 28%,#2ed330 42%,#42d845 57%,#76e275 71%,#8fe791 85%,#fff);
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 8px, #fff 0, #fff 10px, transparent 0, transparent 18px, #fff 0, #fff 20px, transparent 0, transparent 28px, #fff 0, #fff), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff);
     animation: sliding 2s linear 0s infinite
 }
 
 progress:not([value])::-moz-progress-bar:not([value]) {
     animation: sliding 2s linear 0s infinite;
-    background: repeating-linear-gradient(90deg,transparent 0,transparent 8px,#fff 0,#fff 10px,transparent 0,transparent 18px,#fff 0,#fff 20px,transparent 0,transparent 28px,#fff 0,#fff),linear-gradient(180deg,#acedad 0,#7be47d 14%,#4cda50 28%,#2ed330 42%,#42d845 57%,#76e275 71%,#8fe791 85%,#fff)
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 8px, #fff 0, #fff 10px, transparent 0, transparent 18px, #fff 0, #fff 20px, transparent 0, transparent 28px, #fff 0, #fff), linear-gradient(180deg, #acedad 0, #7be47d 14%, #4cda50 28%, #2ed330 42%, #42d845 57%, #76e275 71%, #8fe791 85%, #fff)
 }
 
 /*# sourceMappingURL=XP.css.map */
