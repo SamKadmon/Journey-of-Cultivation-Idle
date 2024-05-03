@@ -1,10 +1,24 @@
-//const scripttext ="$(document).ready(function(){$( '.resizable' ).resizable({alsoResize: '.window-body', handles: 'w, sw, s, se, e'});$( '.draggable' ).draggable();});";  
+// Mouse Event Listeners
+document.addEventListener('click', e => {
+    // Close greeting screen and show desktop
+    if (e.target.closest('.greeting-button')) {
+        e.target.closest('.greeting-overlay').remove();
+    }
+    // Close the window
+    if (e.target.closest('[aria-label="Close"]')) {
+        e.target.closest('.window').remove();
+    }
+    if (e.target.closest('#start-button')) {
+        // createWindow("Window Spawn Testing", "./webpages/spawntest.html");
+        createWindow("Window Spawn Testing", "webpages/spawntest.html");
+    }
+});
 
 function createWindow(title, contents) {
-    var body = document.querySelector("body");
+    var body = document.getElementById("wallpaper");
     var window = document.createElement("div");
     window.className = "window draggable resizable";
-    window.setAttribute('isMaximized', 0);
+    window.setAttribute('maximized', 0);
 
     var titlebar = document.createElement("div");
     titlebar.className = "title-bar";
@@ -29,6 +43,9 @@ function createWindow(title, contents) {
     var windowcontents = document.createElement("iframe");
     windowcontents.setAttribute("src", contents);
 
+    var frameoverlay = document.createElement("div")
+    frameoverlay.className = "frameOverlay";
+
     // Create the taskbar button representing the window
     // var taskbarbutton = document.createElement("button");
     // taskbarbutton.className = "nav-item";
@@ -42,6 +59,7 @@ function createWindow(title, contents) {
     titlebar.appendChild(titletext);
     titlebar.appendChild(windowcontrols);
     windowcontentarea.appendChild(windowcontents);
+    windowcontentarea.appendChild(frameoverlay);
     window.appendChild(titlebar);
     window.appendChild(windowcontentarea);
     body.appendChild(window);
@@ -51,10 +69,8 @@ function createWindow(title, contents) {
             .draggable(
                 {
                     iframeFix: true,
-                    containment: "window",
-                    stack: ".window",
-                    helper: true
-
+                    containment: "parent",
+                    stack: ".window"
                 })
             .resizable(
                 {
@@ -62,21 +78,27 @@ function createWindow(title, contents) {
                     alsoResize: $(this).find($(windowcontentarea)),
                     minWidth: 250,
                     minHeight: 200,
+                    start: (function () {
+                        $(".draggable").find(".frameOverlay").css("display", "block");
+
+                        setTop(this);
+                    }),
+                    stop: (function () {
+                        $(".draggable").find(".frameOverlay").css("display", "none");
+                    })
                 });
     });
+    $(".window").on("mousedown", function () {
+        setTop(this);
+    })
+    setTop(window);
 }
 
 function setTop(window) {
-    windowTable = document.getElementsByClassName("draggable");
-    var maxZ = windowTable[0];
-    for (let i = 0; i < windowTable.length; i++) {
-        if (windowTable[i] > maxZ) { maxZ = windowTable[i] };
-    }
-    for (let i = 0; i < windowTable.length; i++) {
-        if (window == windowTable[i]) {
-            windowTable.zIndex = maxZ + 1;
-        }
-    }
+    var maxZIndex = Math.max.apply(null, $('.draggable').map(function () {
+        return parseInt($(window).css('z-index')) || 1;
+    }).get());
+    $(window).css('z-index', maxZIndex + 1);
 }
 
 function refreshTime() {
@@ -91,29 +113,12 @@ function refreshTime() {
     var strTime = hours + ':' + minutes + ampm;
     document.getElementsByClassName("system-clock")[0].innerText = strTime;
 }
-
 setInterval(refreshTime, 1000);
-// Mouse Event Listeners
-
-document.addEventListener('click', e => {
-    // Close greeting screen and show desktop
-    if (e.target.closest('.greeting-button')) {
-        e.target.closest('.greeting-overlay').remove();
-    }
-    // Close the window
-    if (e.target.closest('[aria-label="Close"]')) {
-        e.target.closest('.window').remove();
-    }
-    if (e.target.closest('#start-button')) {
-        // createWindow("Window Spawn Testing", "./webpages/spawntest.html");
-        createWindow("Window Spawn Testing", "webpages/spawntest.html");
-    }
-});
 
 
-document.addEventListener('mousedown', e => {
-    // Select Window and put it to the top of all the other windows
-    if (e.target.closest('.titlebar')) {
-        setTop(e.target.closest('.titlebar'));
-    }
-});
+// document.addEventListener('mousedown', e => {
+//     // Select Window and put it to the top of all the other windows
+//     if (e.target.closest('.titlebar')) {
+//         setTop(e.target.closest('.titlebar'));
+//     }
+// });
