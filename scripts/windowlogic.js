@@ -91,7 +91,7 @@ function createWindow(title, contents) {
     $('.frameOverlay').on('mousedown', function (event) {
         var iframe = $(this).siblings("iframe")[0];
         var iframeDoc = iframe.contentWindow.document;
-
+        //
         // Get the coordinates of the click relative to the iframe
         var offsetX = event.pageX - $(this).offset().left;
         var offsetY = event.pageY - $(this).offset().top;
