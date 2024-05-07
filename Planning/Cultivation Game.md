@@ -1,4 +1,8 @@
 <hr>
+# [Notes](Notes)
+- Current state of the game and its description.
+
+<hr>
 # [Todo](Todo)
 - Things to do, derived from the planning process
 

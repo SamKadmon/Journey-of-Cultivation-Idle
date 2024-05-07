@@ -63,7 +63,6 @@ function createWindow(title, contents) {
     window.appendChild(titlebar);
     window.appendChild(windowcontentarea);
     body.appendChild(window);
-
     $(".draggable").each(function () {
         $(this)
             .draggable(
@@ -79,26 +78,44 @@ function createWindow(title, contents) {
                     minWidth: 250,
                     minHeight: 200,
                     start: (function () {
-                        $(".draggable").find(".frameOverlay").css("display", "block");
-
                         setTop(this);
+                        $(".draggable").find(".frameOverlay").css("display", "block");
                     }),
                     stop: (function () {
                         $(".draggable").find(".frameOverlay").css("display", "none");
                     })
                 });
     });
-    $(".window").on("mousedown", function () {
-        setTop(this);
-    })
+    $(".window").on("mousedown", function () { setTop(this); });
+
+    $('.frameOverlay').on('mousedown', function (event) {
+        var iframe = $(this).siblings("iframe")[0];
+        var iframeDoc = iframe.contentWindow.document;
+
+        // Get the coordinates of the click relative to the iframe
+        var offsetX = event.pageX - $(this).offset().left;
+        var offsetY = event.pageY - $(this).offset().top;
+
+        // Create and dispatch a mouse event to the iframe document
+        var event = new MouseEvent('click', {
+            bubbles: true,
+            cancelable: true,
+            clientX: offsetX,
+            clientY: offsetY
+        });
+        iframeDoc.dispatchEvent(event);
+    });
+
     setTop(window);
 }
 
 function setTop(window) {
-    var maxZIndex = Math.max.apply(null, $('.draggable').map(function () {
-        return parseInt($(window).css('z-index')) || 1;
-    }).get());
-    $(window).css('z-index', maxZIndex + 1);
+    var maxZIndex = 0;
+    $(".window").each(function () {
+        if (parseInt($(this).css('z-index')) > maxZIndex) { maxZIndex = parseInt($(this).css('z-index')) }
+    });
+    console.log(maxZIndex);
+    if (parseInt($(window).css('z-index')) < maxZIndex) { $(window).css('z-index', maxZIndex + 1) };
 }
 
 function refreshTime() {

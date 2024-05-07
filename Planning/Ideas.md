@@ -7,6 +7,8 @@
 - - The degree to which you remember is based on best milestone achieved in cultivation / reincarnation upgrades
 - Every life should have its own circumstances, leading the player to try different paths, before gaining the ability to 'solidify' (Be always able to pick the same path in another life) their path as they remember more and more of their past incarnations
 
+PORT SITE TO TAURI TO MAKE A WEBAPP? (ELECTRON MIGHT HAVE MORE DOCUMENTATION HOWEVER...)
+
 ARTIFACT CRAFTING
 SECT MANAGEMENT
 SKILL LEVELLING

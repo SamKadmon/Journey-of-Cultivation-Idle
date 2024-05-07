@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ideas.md",
+                "file": "Notes.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ideas.md",
+                "file": "Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ideas.md",
+                "file": "Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ideas.md"
+                "file": "Notes.md"
               }
             }
           }
@@ -195,10 +195,11 @@
   "active": "95e266d76ff978e9",
   "lastOpenFiles": [
     "Todo.md",
+    "Notes.md",
+    "Cultivation Game.md",
+    "Progression.md",
     "Ideas.md",
     "Mechanics/Mechanics.md",
-    "Progression.md",
-    "Cultivation Game.md",
     "Todo",
     "Cultivation.md",
     "Mechanics",
