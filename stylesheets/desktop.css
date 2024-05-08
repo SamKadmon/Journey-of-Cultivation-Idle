@@ -42,15 +42,15 @@ body {
   background-color: rgba(128, 128, 0, 0.5);
   top: 28px;
   left: 0;
-  display: block; 
+  display: block;
 }
 
 .window {
   width: 400px;
   height: 300px;
   position: absolute !important;
-  left: calc(50vw - 200px);
-  top: calc(50vh - 150px);
+  left: 0;
+  top: 0;
   box-sizing: border-box;
   z-index: 0;
 }
@@ -61,12 +61,26 @@ body {
   user-select: none;
 }
 
+.title-bar-text {
+  margin-right: auto;
+  margin-left: 5px;
+  -webkit-font-smoothing: none;
+}
+
+.title-icon {
+  margin-left: 3px;
+  width: 16px;
+  height: 16px;
+}
+
 .window-body {
   display: block;
   margin: 0;
   margin-left: 3px;
   width: calc(100% - 6px);
   height: calc(100% - 28px);
+  box-sizing: border-box;
+  overflow: scroll;
 }
 
 iframe {
@@ -109,6 +123,38 @@ body {
   padding: 0;
 }
 
+#start-button {
+  flex-shrink: 0;
+}
+
+#start-button .container {
+  position: relative;
+  overflow: hidden;
+}
+
+#start-button .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#start-button-icon {
+  height: 20px;
+  width: 28px;
+}
+
+#tray-notify {
+  flex-shrink: 0;
+}
+
+#tray-notify .container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Taskbar */
 .background.sliced {
   display: flex;
   flex-direction: row;
@@ -139,26 +185,13 @@ body {
   max-height: 30px;
 }
 
-#start-button {
-  flex-shrink: 0;
+#task-band {
+  flex-grow: 1;
+  flex-direction: row;
 }
 
-#start-button .container {
-  position: relative;
-  overflow: hidden;
-}
-
-#start-button .overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#start-button-icon {
-  height: 20px;
-  width: 28px;
+.taskbar-item {
+  width: 250px;
 }
 
 #taskbar {
@@ -170,23 +203,6 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-#task-band {
-  flex-grow: 1;
-}
-
-#tray-notify {
-  flex-shrink: 0;
-}
-
-#tray-notify .container {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Taskbar */
-#taskbar {
   height: 30px;
 }
 

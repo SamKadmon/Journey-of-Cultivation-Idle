@@ -48,7 +48,9 @@
 		- [x] Make windows properly draggable
 		- [x] Make windows properly resizable
 		- [x] Make windows closable
-		- [ ] Make windows maximizable
+		- [x] Make windows maximizable
+			- [x] Implement proper unmaximization
+			- [x] Implement **PROPER** maximization/unmaximization on drag of the titlebar
 		- [ ] Make windows minimizable
 
 		<hr>

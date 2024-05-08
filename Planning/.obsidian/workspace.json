@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes.md",
+                "file": "Todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes.md",
+                "file": "Todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes.md"
+                "file": "Todo.md"
               }
             }
           }
@@ -192,10 +192,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "95e266d76ff978e9",
+  "active": "13cf6cdfa72f33d0",
   "lastOpenFiles": [
-    "Todo.md",
     "Notes.md",
+    "Todo.md",
     "Cultivation Game.md",
     "Progression.md",
     "Ideas.md",
